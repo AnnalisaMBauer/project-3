@@ -1,3 +1,38 @@
+```
+      ___          ___     
+     /\__\        /\  \    
+    /:/ _/_      /::\  \   
+   /:/ /\  \    /:/\:\  \  
+  /:/ /::\  \  /:/  \:\  \ 
+ /:/__\/\:\__\/:/__/_\:\__\
+ \:\  \ /:/  /\:\  /\ \/__/
+  \:\  /:/  /  \:\ \:\__\ 
+   \:\/:/  /    \:\/:/  /  
+    \::/  /      \::/  /   
+     \/__/        \/__/                                                        
+ _____ _____ _____ _____ 
+|   __|   __|   __|  |  |
+|  |  |   __|   __|    -|
+|_____|_____|_____|__|__|
+ _____ _____ _____ _____ _____
+|   __|  _  |     |   __|   __|
+|  |  |     | | | |   __|__   |
+|_____|__|__|_|_|_|_____|_____|  
+```
+
+## Description
+
+## About this project
+
+## Technologies
+
+## Future Scope
+
+## Contributions
+
+## License
+
+<hr></hr>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
