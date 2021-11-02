@@ -4,8 +4,8 @@ import Footer from "./footer";
 import Body from "./body";
 import NavBar from "./navbar";
 
-import RockPaperScissors from "./rockPaperScissor";
 import Game from "./TicTacToe/game";
+import RockPaperScissors from "./rockPaperScissor";
 import Contact from "../pages/contact";
 
 export default function Navigation() {
@@ -18,7 +18,7 @@ export default function Navigation() {
     if (currentPage === "RockPaperScissors") {
       return <RockPaperScissors />;
     }
-    if (currentPage === "TicTacToe") {
+    if (currentPage === "Tic Tac Toe") {
       return <Game />;
     }
     // if (currentPage === "Connect Four") {
