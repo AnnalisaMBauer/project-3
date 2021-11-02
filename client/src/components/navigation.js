@@ -6,7 +6,7 @@ import NavBar from "./navbar";
 
 import RockPaperScissors from "./rockPaperScissor";
 import Game from "./TicTacToe/game";
-import Contact from "./pages/contact";
+import Contact from "../pages/contact";
 
 export default function Navigation() {
   const [currentPage, setCurrentPage] = useState("Body");
