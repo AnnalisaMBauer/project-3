@@ -5,7 +5,7 @@ import Body from "./body";
 import NavBar from "./navbar"
 
 import RockPaperScissors from "./rockPaperScissor";
-import Contact from "./pages/contact";
+import Contact from "../pages/contact";
 
 
 export default function Navigation() {
