@@ -18,7 +18,7 @@ export default function Navigation() {
     if (currentPage === "RockPaperScissors") {
       return <RockPaperScissors />;
     }
-    if (currentPage === "Tic Tac Toe") {
+    if (currentPage === "TicTacToe") {
       return <Game />;
     }
     // if (currentPage === "Connect Four") {
