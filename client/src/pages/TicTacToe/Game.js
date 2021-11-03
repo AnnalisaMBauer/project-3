@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { calculateWinner } from "../../utils/ticHelper";
 import Board from "./Board";
+import Jumbotron from "./JumboTicTac";
 
 const container = {
   justifyContent: "center",
@@ -17,6 +18,8 @@ const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xIsNext, SetXisNext] = useState(true);
   const winner = calculateWinner(board);
+  const [showDiv, setShowDiv] = useState(true);
+  const clickDiv = () => setShowDiv(false)
 
   const handleClick = (i) => {
     const boardCopy = [...board];
@@ -33,6 +36,8 @@ const Game = () => {
   };
 
   return (
+    <div onClick={clickDiv} class="container mb-5 z-index-1">
+      {showDiv ? <Jumbotron /> : null }
     <div style={container}>
       {" "}
       <Board squares={board} onClick={handleClick} />
@@ -44,6 +49,7 @@ const Game = () => {
         </p>
         {renderMoves()}
       </div>
+    </div>
     </div>
   );
 };
