@@ -1,5 +1,5 @@
 import RockPaperScissors from "./RockPaperScissor";
-import Contact from "./Contact";
+import Contact from "./contact";
 import TicTacToe from "./TicTacToe";
 import Home from "./Home";
 
