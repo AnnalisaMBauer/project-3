@@ -32,14 +32,16 @@ function App() {
   return (
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <NavBar />
-        <Switch>
-          {pages.map(({ Component, path, exact }) => (
-            <Route path={path} exact={exact}>
-              <Component />
-            </Route>
-          ))}
-        </Switch>
+        <div className="container">
+          <NavBar />
+          <Switch>
+           {pages.map(({ Component, path, exact }) => (
+             <Route path={path} exact={exact}>
+               <Component />
+             </Route>
+           ))}
+          </Switch>
+        </div>
         <Footer />
       </ApolloProvider>
     </BrowserRouter>

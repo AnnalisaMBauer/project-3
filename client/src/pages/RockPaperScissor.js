@@ -1,7 +1,10 @@
 import { useState } from "react";
+import Zoom from 'react-reveal/Zoom';
+import Flash from 'react-reveal/Flash';
+import Tada from 'react-reveal/Tada';
 
 const RockPaperScissors = () => {
-  const choices = ["rock", "paper", "scissors"];
+  const choices = ["🤘", "🧻", "✂️"];
   const [userChoice, setUserChoice] = useState("");
   const [computerChoice, setComputerChoice] = useState("");
   const [result, setResult] = useState("");
@@ -15,9 +18,9 @@ const RockPaperScissors = () => {
     const computerVal = generateComputerChoice();
 
     if (
-      (computerVal === "rock" && value === "paper") ||
-      (computerVal === "paper" && value === "scissors") ||
-      (computerVal === "scissors" && value === "rock")
+      (computerVal === "🤘" && value === "🧻") ||
+      (computerVal === "🧻" && value === "✂️") ||
+      (computerVal === "✂️" && value === "🤘")
     ) {
       setScores({
         ...scores,
@@ -45,31 +48,56 @@ const RockPaperScissors = () => {
     return choices[Math.floor(Math.random() * choices.length)];
   };
 
+  const Style = {
+    fontSize: '5rem',
+    width: '200px',
+    height: '200px',
+    boxShadow: '4px 4px 10px 1px black',
+  };
+
+  // TODO add username of logged in user to h1 'User choice' element
   return (
+    <div class="container">
+    <div class="jumbotron jumbotron-fluid p-3 mt-5 rounded">
+    <h1 class="display-4"><em>Rock Paper Scissors</em></h1>
+    <p class="lead">This is a simultaneous, zero-sum game, and it has only two possible outcomes:<br></br> 
+    a draw, or a win for one player and a loss for the other.<br></br> 
+    "rock crushes scissors" | "paper covers rock" | "scissors cuts paper".<br></br> 
+   If the game is a draw, it is repeated until a winner is declared.</p>
+  </div>
+
     <div className="d-flex col-12 justify-content-center align-items-center mt-5">
-      <div className="p-5">
-        <div>
-          <p>Wins: {scores.wins}</p>
-          <p>Losses: {scores.losses}</p>
-          <p>Ties: {scores.ties}</p>
+      
+      <div className="p-1">
+        <div className="row p-1 justify-content-center">
+          <h1 className="display-5 p-3">Wins: {scores.wins}</h1>
+          <h1 className="display-5 p-3">Losses: {scores.losses}</h1>
+          <h1 className="display-5 p-3">Ties: {scores.ties}</h1>
         </div>
-        <div className="">
-          <h1>user choice is: {userChoice}</h1>
-          <h1>computer choice is: {computerChoice}</h1>
+        <div className="text-center">
+          <h1>User's choice is: {userChoice}</h1>
+          <h1>Computer's choice is: {computerChoice}</h1>
         </div>
-        <div className="">
+        <div className="p-5">
+          <Zoom>
+            <Tada spy={handleClick}>
           {choices.map((choice, index) => (
-            <button
-              className="m-2"
+            <button style={Style}
+              className="m-2 btn btn-dark rounded-circle"
               key={index}
               onClick={() => handleClick(choice)}
             >
               {choice}
             </button>
           ))}
+          </Tada>
+          </Zoom>
         </div>
-        <h1>{result}</h1>
+        <Flash spy={result}>
+        <h1 className="display-1 text-center">{result}</h1>
+        </Flash>
       </div>
+    </div>
     </div>
   );
 };
