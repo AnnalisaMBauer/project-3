@@ -28,18 +28,20 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const contain = { padding: "0 8.5em" };
+
 function App() {
   return (
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <div className="container">
+        <div style={contain}>
           <NavBar />
           <Switch>
-           {pages.map(({ Component, path, exact }) => (
-             <Route path={path} exact={exact}>
-               <Component />
-             </Route>
-           ))}
+            {pages.map(({ Component, path, exact }) => (
+              <Route path={path} exact={exact}>
+                <Component />
+              </Route>
+            ))}
           </Switch>
         </div>
         <Footer />
