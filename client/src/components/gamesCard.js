@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 
 function GamesCard(game) {
-    console.log(game)
+        
     return (
         <div className="gamesColumns col-4">
         <div className=" mt-3 mb-3 ">
@@ -14,9 +14,9 @@ function GamesCard(game) {
                         <p className="m-2 p-3"> {game.games.description} </p> 
                 </div>
             </div>
-                <div className="card-action ml-5">
-                    <a href={game.games.play} target="_blank" rel="noreferrer" className="p-3">Play Now!</a>
-                </div>
+            <div className="card-action ml-5">
+                <a href={game.games.play} target="_blank" rel="noreferrer" className="p-3">Play Now!</a>
+            </div>
         </div>
         </div>
     )
