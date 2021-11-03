@@ -23,19 +23,19 @@ const RockPaperScissors = () => {
         ...scores,
         wins: scores.wins + 1,
       });
-      setResult("Won!")
+      setResult("You Won!")
     } else if (computerVal === value) {
       setScores({
         ...scores,
         ties: scores.ties + 1,
       });
-      setResult("Tied!")
+      setResult("You Tied!")
     } else {
       setScores({
         ...scores,
         losses: scores.losses + 1,
       });
-      setResult("Lost!")
+      setResult("You Lost!")
     }
     setUserChoice(value);
     setComputerChoice(computerVal);
