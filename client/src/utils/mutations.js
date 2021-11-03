@@ -24,15 +24,15 @@ export const ADD_USER = gql`
   }
 `;
 
-export const SAVE_HIGHSCORE = gql`
-  mutation saveHighscore($highscoreData: HighscoreInput!) {
-    saveHighscore(highscoreData: $highscoreData {
-      _id
-      username
-      email
-      savedHighscores {
-        score
-      }
-    }
-  }
-`;
+// export const SAVE_HIGHSCORE = gql`
+//   mutation saveHighscore($highscoreData: HighscoreInput!) {
+//     saveHighscore(highscoreData: $highscoreData {
+//       _id
+//       username
+//       email
+//       savedHighscores {
+//         score
+//       }
+//     }
+//   }
+// `;
