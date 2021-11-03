@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { calculateWinner } from "../../utils/ticHelper";
-import Board from "./board";
+import Board from "./Board";
 
 const container = {
   justifyContent: "center",
