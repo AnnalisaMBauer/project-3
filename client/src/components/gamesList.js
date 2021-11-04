@@ -1,12 +1,12 @@
-// TODO IMAGES not showing up unless externial link 
-
+// TODO IMAGES not showing up unless externial link
+import { Link } from "react-router-dom"; 
 const games = [
     {
         title: "Rock Paper Scissors",
         img: "https://placekitten.com",
         tech: "Tech: HTML/CSS/JavaScript, ReactJs",
         description: "Basic good 'ol game of Rock Paper Scissors.",
-        play: "RockPaperScissor",
+        play: <Link to='/RockPaperScissors'></Link>,
         id:"1",
     },
     {
