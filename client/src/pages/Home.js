@@ -98,7 +98,7 @@ function Body({ currentPage, handlePageChange }) {
           </div>
           <div className="carousel-item">
           <div style={ImgStyle}>
-            <Link to="/connect-four" className="p-2 text-white">
+            <Link to="/snake" className="p-2 text-white">
               <img
                 src="./img/tictac.png"
                 className="d-block w-100"
