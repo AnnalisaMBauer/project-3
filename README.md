@@ -37,17 +37,29 @@ Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) an
 #### Quixote © 2021 Geek Games
 
 ## About this project
+Developed 
 
 ## Technologies
+React.js, GraphQl, MongoDB
 
 ## Future Scope
+We'll keep adding new games of course...
+* Addition of a game-list carousel to the home page.
+* Ability to change game modes from PvP to PvAi.
+* Chat element for PvP mode.
+* Profile page for users.
+* Scores list for users profile (games played, games won/lost).
+* More React functionality (intelligent type prediction).
+* Styling the site more to that of gamers.
 
 ## Contributions
+Special thanks to @tuckerbeauchamp
 
 ## License
+MIT
 
-<hr></hr>
-# Getting Started with Create React App
+# This project was created using React.js
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
