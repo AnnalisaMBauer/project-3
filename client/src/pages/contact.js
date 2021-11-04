@@ -3,6 +3,14 @@ import React, { useRef } from 'react';
 
 
 function Contact() {
+  const Style = {
+    boxShadow: '4px 4px 10px 1px black',
+    borderRadius: '1rem',
+    background: 'linear-gradient(180deg, rgba(83,175,200,1) 10%, rgba(255,255,255,0.4983734227129337) 100%)',
+    color: "white",
+    padding: '1rem',
+    width: '800px',
+  };
     const form = useRef();
     const sendEmail = (e) => {
       e.preventDefault();
@@ -16,8 +24,9 @@ function Contact() {
         });
     };
     return (
-      <div className="">
-        <div id="bg-image-contact" className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div className="d-flex justify-content-center">
+      <div>
+        <div id="bg-image-contact" className="mb-5" style={Style}>
             <div className="col-md-6 px-0">
                  <h1 className="display-4 fst-italic">Contact us!</h1>
                  <p className="lead my-3 m-1">
@@ -28,7 +37,7 @@ function Contact() {
                  </p>
             </div>
             </div>
-               <div className="p-4 p-md-5 text-white rounded bg-dark">
+               <div className="pt-5" style={Style}>
                <form ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
                 <div className="input-group">
@@ -42,6 +51,7 @@ function Contact() {
                 </form>
                
                </div>
+            </div>
             </div>
     );
   };
