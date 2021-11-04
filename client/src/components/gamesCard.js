@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import { Link } from "react-router-dom";
 
 function GamesCard(game) {
     console.log(game)
@@ -15,7 +16,7 @@ function GamesCard(game) {
                 </div>
             </div>
                 <div className="card-action ml-5">
-                    <a href={game.games.play} target="_blank" rel="noreferrer" className="p-3">Play Now!</a>
+                    <Link to={game.games.play} target="_blank" rel="noreferrer" className="p-3">Play Now!</Link>
                 </div>
         </div>
         </div>

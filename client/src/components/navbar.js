@@ -4,8 +4,7 @@ import { Nav, Modal, Tab } from "react-bootstrap";
 import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
 import Auth from "../utils/auth";
-
-// import "../styles/navbar.css";
+ 
 // import '../App.css';
 
 const style1 = {
