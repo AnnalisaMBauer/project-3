@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 
 const style1 = {
   borderRadius: "25px",
-  margin: "1.5em 0em 2em 0em",
+  margin: "1.5em 0em 1em 0em",
   display: "flex",
   backgroundColor: "rgb(206 216 223 / 50%)",
   alignItems: "center",
@@ -15,11 +15,10 @@ const style1 = {
 };
 const logo = {
   color: "white",
-  fontSize: "2.5em",
-  paddingLeft: "1.5em",
-  marginBottom: ".5rem",
+  fontSize: "3em",
+  paddingLeft: ".5em",
   fontWeight: "500",
-  lineHeight: "1.2",
+  
 };
 const nav = {
   paddingRight: "4em",
@@ -28,13 +27,19 @@ const nav = {
   margin: "0",
   alignItems: "center",
 };
+const Quixote = {
+  width: '10%',
+  marginRight: '1rem',
+  marginBottom: '.5em',
+  marginTop: '.5em',
+}
 
 function NavBar({ currentPage, handlePageChange }) {
   return (
     <div style={style1}>
       <header className="blog-header ">
         <a style={logo} href="/">
-          GG
+          <img src="./img/quixote.png" style={Quixote} />GG
         </a>
       </header>
         <div className="col-4 d-flex justify-content-end align-items-center">
