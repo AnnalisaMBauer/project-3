@@ -5,6 +5,7 @@ function Body({ currentPage, handlePageChange }) {
   const Style = {
     marginTop: "10px",
     height: "40px",
+    fontFamily: 'Orbitron',
   };
   const ImgStyle = {
     marginLeft: 'auto',
@@ -12,6 +13,7 @@ function Body({ currentPage, handlePageChange }) {
     height: "550px",
     width: "700px",
     borderRadius: '30px',
+    fontFamily: 'Orbitron',
   };
 
   const BntStyle = {
@@ -22,15 +24,21 @@ function Body({ currentPage, handlePageChange }) {
     marginLeft: '10%',
     marginRight: '10%',
     borderRadius: '30px',
+    fontFamily: 'Orbitron',
   };
 
   const BtmBtn = {
     marginLeft: '10px',
     borderRadius: '10px',
+    fontFamily: 'Orbitron',
+  }
+
+  const HomeBox = {
+    fontFamily: 'Orbitron',
   }
 
   return (
-    <div>
+    <div className="homeBox" style={HomeBox}>
       <div
         id="carouselExampleCaptions"
         className="carousel slide"

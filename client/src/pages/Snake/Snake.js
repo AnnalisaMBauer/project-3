@@ -101,6 +101,7 @@ const Snake = () => {
         margin: "4em 0",
         alignItems: "center",
         flexDirection: "column",
+        fontFamily: 'Orbitron',
       }}
       role="button"
       tabIndex="0"

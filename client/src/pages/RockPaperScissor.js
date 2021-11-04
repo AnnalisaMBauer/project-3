@@ -57,16 +57,19 @@ const RockPaperScissors = () => {
     width: "150px",
     height: "150px",
     boxShadow: "4px 4px 10px 1px black",
+    fontFamily: 'Orbitron',
   };
 
   const ContStyle = {
     display: "grid",
     gridTemplateRows: "1fr 1fr",
     marginTop: "20vh",
+    fontFamily: 'Orbitron',
   };
 
   const GameStyle = {
     gridArea: "1 / 1",
+    fontFamily: 'Orbitron',
   };
 
   // TODO add username of logged in user to h1 'User choice' element
@@ -90,7 +93,7 @@ const RockPaperScissors = () => {
                 Computer's choice is: <Swing>{computerChoice}</Swing>
               </h1>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
               {choices.map((choice, index) => (
                 <button
                   style={Style}

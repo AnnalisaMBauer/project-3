@@ -10,6 +10,7 @@ const container = {
   alignItems: "center",
   display: "flex",
   margin: "3em 0 1em 0",
+  fontFamily: 'Orbitron',
 };
 
 const styles = {
@@ -20,6 +21,7 @@ const styles = {
   marginRight: "auto",
   width: "200px",
   textAlign: "center",
+  fontFamily: 'Orbitron',
 };
 
 const Game = () => {

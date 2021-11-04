@@ -5,6 +5,7 @@ const style = {
   fontWeight: "800",
   cursor: "pointer",
   outline: "none",
+  fontFamily: 'Orbitron',
 };
 
 const Square = ({ value, onClick }) => (
