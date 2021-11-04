@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 
 import { useMutation } from "@apollo/client";
-import { ADD_USER } from "../utils/mutations";
-import Auth from "../utils/auth";
+import { ADD_USER } from "../../utils/mutations";
+import Auth from "../../utils/auth";
 
 const SignupForm = () => {
   // set initial form state
@@ -61,7 +61,7 @@ const SignupForm = () => {
   };
 
   return (
-    <>
+    <div className="p-5">
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
@@ -118,6 +118,7 @@ const SignupForm = () => {
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
+        <div className="mt-3">
         <Button
           disabled={
             !(
@@ -131,8 +132,9 @@ const SignupForm = () => {
         >
           Submit
         </Button>
+        </div>
       </Form>
-    </>
+      </div>
   );
 };
 

@@ -1,3 +1,7 @@
+
+
+
+
 ```
       ___          ___     
      /\__\        /\  \    
@@ -21,19 +25,41 @@
 ```
 
 ## Description
+GG (GeekGames) is an application that has a collection of games that are available for play online and offline.
+
+Sign-up and login to keep track of you r scores. 
+Play against a friend or try you hand(fingers) against the our 'Ai': Quixote.<br>
+
+
+Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) and makes a great opponent.
+<br></br>
+![quixoteMD](https://user-images.githubusercontent.com/69359454/140375048-d999205f-9c55-411c-97d2-558c10ef9478.png)
+#### Quixote © 2021 Geek Games
 
 ## About this project
+Developed 
 
 ## Technologies
+React.js, GraphQl, MongoDB
 
 ## Future Scope
+We'll keep adding new games of course...
+* Addition of a game-list carousel to the home page.
+* Ability to change game modes from PvP to PvAi.
+* Chat element for PvP mode.
+* Profile page for users.
+* Scores list for users profile (games played, games won/lost).
+* More React functionality (intelligent type prediction).
+* Styling the site more to that of gamers.
 
 ## Contributions
+Special thanks to @tuckerbeauchamp
 
 ## License
+MIT
 
-<hr></hr>
-# Getting Started with Create React App
+# This project was created using React.js
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

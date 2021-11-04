@@ -1,38 +1,38 @@
 {
-    "name": "project-3",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {},
-    "scripts": {
-      "start": "react-scripts start",
-      "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-      "build": "react-scripts build",
-      "install": "cd server && npm i && cd ../client && npm i",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-      "extends": [
-        "react-app",
-        "react-app/jest"
-      ]
-    },
-    "browserslist": {
-      "production": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
-      ],
-      "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
-      ]
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "concurrently": "^5.3.0"
-    }
+  "name": "project-3",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "build": "react-scripts build",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
   }
+}
