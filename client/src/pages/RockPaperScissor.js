@@ -1,7 +1,7 @@
 import { useState } from "react";
+import styles from "./RockPaperScissors.module.css";
 import Zoom from "react-reveal/Zoom";
 import Flash from "react-reveal/Flash";
-import Jello from "react-reveal/Jello";
 import Swing from "react-reveal/Swing";
 import Jumbotron from "./RpsJumbotron";
 
@@ -84,25 +84,24 @@ const RockPaperScissors = () => {
             </div>
             <div className="text-center">
               <h1>
-                User's choice is: <Swing spy={handleClick}>{userChoice}</Swing>
+                User's choice is: <Swing>{userChoice}</Swing>
               </h1>
               <h1>
-                Computer's choice is:{" "}
-                <Swing spy={handleClick}>{computerChoice}</Swing>
+                Computer's choice is: <Swing>{computerChoice}</Swing>
               </h1>
             </div>
             <div className="row">
               {choices.map((choice, index) => (
-                <Jello spy={handleClick}>
-                  <button
-                    style={Style}
-                    className=" m-2 btn btn-dark rounded-circle"
-                    key={index}
-                    onClick={() => handleClick(choice)}
-                  >
-                    {choice}
-                  </button>
-                </Jello>
+                <button
+                  style={Style}
+                  className={`m-2 btn btn-dark rounded-circle ${
+                    userChoice === choice && styles["jello"]
+                  }`}
+                  key={index}
+                  onClick={() => handleClick(choice)}
+                >
+                  {choice}
+                </button>
               ))}
             </div>
           </Zoom>
