@@ -32,7 +32,7 @@ const nav = {
 };
 
 function NavBar({ currentPage, handlePageChange }) {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   return (
     <div style={style1}>
       <header className="blog-header ">
