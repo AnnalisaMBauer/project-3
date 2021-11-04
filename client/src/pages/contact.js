@@ -1,5 +1,6 @@
 import emailjs from 'emailjs-com'
 import React, { useRef } from 'react';
+import Zoom from 'react-reveal/Zoom';
 
 
 function Contact() {
@@ -25,6 +26,7 @@ function Contact() {
     };
     return (
       <div className="d-flex justify-content-center">
+        <Zoom>
       <div>
         <div id="bg-image-contact" className="mb-5" style={Style}>
             <div className="col-md-6 px-0">
@@ -52,6 +54,7 @@ function Contact() {
                
                </div>
             </div>
+            </Zoom>
             </div>
     );
   };
