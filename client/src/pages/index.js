@@ -2,12 +2,14 @@ import RockPaperScissors from "./RockPaperScissor";
 import Contact from "./contact";
 import TicTacToe from "./TicTacToe";
 import Home from "./Home";
+import Login from "./Login";
 
 const pages = [
   {
     Component: Home,
     path: "/",
     exact: true,
+    isProtected: true,
   },
   {
     Component: Contact,
@@ -18,10 +20,17 @@ const pages = [
     Component: RockPaperScissors,
     path: "/rock-paper-scissors",
     exact: true,
+    isProtected: true,
   },
   {
     Component: TicTacToe,
     path: "/tic-tac-toe",
+    exact: true,
+    isProtected: true,
+  },
+  {
+    Component: Login,
+    path: "/login",
     exact: true,
   },
 ];

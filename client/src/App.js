@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ProtectedRoute from "./utils/ProtectedRoute";
 import NavBar from "./components/navbar";
 import Footer from "./components/footer";
 import {
@@ -34,14 +35,21 @@ function App() {
   return (
     <BrowserRouter>
       <ApolloProvider client={client}>
+        <ProtectedRoute />
         <div style={contain}>
           <NavBar />
           <Switch>
-            {pages.map(({ Component, path, exact }) => (
-              <Route path={path} exact={exact}>
-                <Component />
-              </Route>
-            ))}
+            {pages.map(({ Component, path, exact, isProtected }) =>
+              isProtected ? (
+                <ProtectedRoute path={path} exact={exact}>
+                  <Component />
+                </ProtectedRoute>
+              ) : (
+                <Route path={path} exact={exact}>
+                  <Component />
+                </Route>
+              )
+            )}
           </Switch>
         </div>
         <Footer />
