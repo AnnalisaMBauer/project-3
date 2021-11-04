@@ -26,6 +26,7 @@ const nav = {
   display: "flex",
   listStyle: "none",
   margin: "0",
+  alignItems: "center",
 };
 
 function NavBar({ currentPage, handlePageChange }) {
@@ -35,28 +36,13 @@ function NavBar({ currentPage, handlePageChange }) {
         <a style={logo} href="/">
           GG
         </a>
-        <div className="col-4 d-flex justify-content-end align-items-center"></div>
       </header>
+        <div className="col-4 d-flex justify-content-end align-items-center">
       <div className="nav-scroller py-1 mb-2">
         <nav>
           <ul style={nav}>
-            <li className={currentPage === "Projects" ? "active" : ""}>
-              <Link to="/rock-paper-scissors" className="p-2 text-white">
-                Rock Paper Scissors
-              </Link>
-            </li>
-            <li className={currentPage === "Resume" ? "active" : ""}>
-              <Link to="/tic-tac-toe" className="p-2 text-white">
-                Tic Tac Toe
-              </Link>
-            </li>
-            <li className={currentPage === "Artwork" ? "active" : ""}>
-              <Link to="/connect-four" className="p-2 text-white">
-                Connect Four
-              </Link>
-            </li>
             <li className={currentPage === "Contact" ? "active" : ""}>
-              <Link to="/contact" className="p-2 text-white">
+              <Link to="/contact" className="m-5 text-white ">
                 Contact
               </Link>
             </li>
@@ -74,6 +60,7 @@ function NavBar({ currentPage, handlePageChange }) {
             </Nav>
           </ul>
         </nav>
+      </div>
       </div>
     </div>
   );
