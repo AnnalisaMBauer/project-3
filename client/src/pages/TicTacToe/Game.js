@@ -22,11 +22,6 @@ const styles = {
 };
 
 const Game = () => {
-  const [scores, setScores] = useState({
-    wins: 0,
-    losses: 0,
-    ties: 0,
-  });
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xIsNext, SetXisNext] = useState(true);
   const winner = calculateWinner(board);
@@ -39,10 +34,6 @@ const Game = () => {
     boardCopy[i] = xIsNext ? "❌" : "⭕";
     setBoard(boardCopy);
     SetXisNext(!xIsNext);
-    if (boardCopy === "❌") return setScores({
-      ...scores,
-      wins: scores.wins + 1,
-    })
   };
 
   const renderMoves = () => {
@@ -69,7 +60,6 @@ const Game = () => {
       {showDiv ? <Jumbotron /> : null }
       <div style={GameStyle}>
         <Zoom>
-          
             <h3 style={styles}>
               {winner
                 ? "Winner: " + winner
