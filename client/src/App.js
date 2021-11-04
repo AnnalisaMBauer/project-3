@@ -12,6 +12,7 @@ import {
 import pages from "./pages";
 import { setContext } from "@apollo/client/link/context";
 
+
 const httpLink = createHttpLink({ uri: "/graphql" });
 
 const authLink = setContext((_, { headers }) => {
@@ -29,7 +30,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const contain = { padding: "0 8.5em" };
+const contain = { padding: "0 8.5em", overflow: 'hidden', };
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <ProtectedRoute />
         <div style={contain}>
           <NavBar />
+       
           <Switch>
             {pages.map(({ Component, path, exact, isProtected }) =>
               isProtected ? (
@@ -49,7 +51,7 @@ function App() {
                   <Component />
                 </Route>
               )
-            )}
+              )}
           </Switch>
         </div>
         <Footer />
