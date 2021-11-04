@@ -2,19 +2,31 @@ import React, { useState } from "react";
 import { calculateWinner } from "../../utils/ticHelper";
 import Board from "./Board";
 import Jumbotron from "./JumboTicTac";
+import Zoom from 'react-reveal/Zoom';
 
 const container = {
   justifyContent: "center",
   alignItems: "center",
   display: "flex",
-  margin: "3em 0 8em 0",
+  margin: "3em 0 1em 0",
 };
+
 const styles = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginLeft: 'auto',
+  marginRight: 'auto',
   width: "200px",
-  // margin: "20px auto",
+  textAlign: 'center',
 };
 
 const Game = () => {
+  const [scores, setScores] = useState({
+    wins: 0,
+    losses: 0,
+    ties: 0,
+  });
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xIsNext, SetXisNext] = useState(true);
   const winner = calculateWinner(board);
@@ -24,9 +36,13 @@ const Game = () => {
   const handleClick = (i) => {
     const boardCopy = [...board];
     if (winner || boardCopy[i]) return;
-    boardCopy[i] = xIsNext ? "X" : "O";
+    boardCopy[i] = xIsNext ? "❌" : "⭕";
     setBoard(boardCopy);
     SetXisNext(!xIsNext);
+    if (boardCopy === "❌") return setScores({
+      ...scores,
+      wins: scores.wins + 1,
+    })
   };
 
   const renderMoves = () => {
@@ -35,21 +51,39 @@ const Game = () => {
     );
   };
 
+  const ContStyle = {
+    display: 'grid',
+    gridTemplateRows: '1fr 1fr',
+    marginTop: '20vh',
+  } 
+
+  const GameStyle = {
+    gridArea: '1 / 1',
+    zIndex: '1',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  }
+
   return (
-    <div onClick={clickDiv} class="container mb-5 z-index-1">
+    <div onClick={clickDiv} class="container mb-5" style={ContStyle}>
       {showDiv ? <Jumbotron /> : null }
-    <div style={container}>
-      {" "}
-      <Board squares={board} onClick={handleClick} />
-      <div style={styles}>
-        <p>
-          {winner
-            ? "Winner: " + winner
-            : "Next Player: " + (xIsNext ? "X" : "O")}
-        </p>
-        {renderMoves()}
+      <div style={GameStyle}>
+        <Zoom>
+          
+            <h3 style={styles}>
+              {winner
+                ? "Winner: " + winner
+                : "Next Player: " + (xIsNext ? "❌" : "⭕")}
+            </h3>
+        <div style={container}>
+          {" "}
+          <Board squares={board} onClick={handleClick} />
+        </div >
+          <div style={styles}>
+            {renderMoves()}
+                </div>
+        </Zoom>
       </div>
-    </div>
     </div>
   );
 };

@@ -58,14 +58,25 @@ const RockPaperScissors = () => {
     boxShadow: '4px 4px 10px 1px black',
   };
 
+  const ContStyle = {
+    display: 'grid',
+    gridTemplateRows: '1fr 1fr',
+    marginTop: '20vh',
+  } 
+
+  const GameStyle = {
+    gridArea: '1 / 1',
+  }
+
   // TODO add username of logged in user to h1 'User choice' element
   return (
-    <div onClick={clickDiv} class="container mb-5 z-index-1">
+    <div onClick={clickDiv} class="container mb-5" style={ContStyle}>
       {showDiv ? <Jumbotron /> : null }
  
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center" style={GameStyle}>
       
       <div className="p-1">
+          <Zoom>
         <div className="row p-1 justify-content-center">
           <h1 className="display-5 pt-0">Wins: {scores.wins}</h1>
           <h1 className="display-5 pt-0 pl-5">Losses: {scores.losses}</h1>
@@ -76,7 +87,6 @@ const RockPaperScissors = () => {
           <h1>Computer's choice is: {computerChoice}</h1>
         </div>
         <div className="row">
-          <Zoom>
             <Tada spy={handleClick}>
           {choices.map((choice, index) => (
             <button style={Style}
@@ -88,8 +98,8 @@ const RockPaperScissors = () => {
             </button>
           ))}
           </Tada>
-          </Zoom>
         </div>
+          </Zoom>
         <Flash spy={result}>
         <h1 className="display-1 text-center mb-5">{result}</h1>
         </Flash>

@@ -4,11 +4,16 @@ import Zoom from 'react-reveal/Zoom';
 const Jumbotron = () => {
     const Style = {
         fontSize: '5rem',
+        textAlign: 'center',
         padding: '1.5rem',
         boxShadow: '4px 4px 10px 1px black',
-        borderRadius: '1rem',
+        borderRadius: '2rem',
         cursor: "pointer",
+        gridArea: '1 / 1',
         zIndex: '999',
+        background: 'linear-gradient(180deg, rgba(83,175,200,1) 50%, rgba(255,255,255,0.4983734227129337) 100%)',
+        color: "white",
+        margin: 'auto',
       };
     
 return(
@@ -19,6 +24,7 @@ return(
         a draw, or a win for one player and a loss for the other.<br></br> 
         "rock crushes scissors" | "paper covers rock" | "scissors cuts paper".<br></br> 
         If the game is a draw, it is repeated until a winner is declared.</p>
+        <p><em>Click to begin!</em></p>
         </div>
     </Zoom>
 )
