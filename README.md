@@ -1,3 +1,7 @@
+
+
+
+
 ```
       ___          ___     
      /\__\        /\  \    
@@ -21,6 +25,16 @@
 ```
 
 ## Description
+GG (GeekGames) is an application that has a collection of games that are available for play online and offline.
+
+Sign-up and login to keep track of you r scores. 
+Play against a friend or try you hand(fingers) against the our 'Ai': Quixote.<br>
+
+
+Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) and makes a great opponent.
+<br></br>
+![quixoteMD](https://user-images.githubusercontent.com/69359454/140375048-d999205f-9c55-411c-97d2-558c10ef9478.png)
+#### Quixote © 2021 Geek Games
 
 ## About this project
 
