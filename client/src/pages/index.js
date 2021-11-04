@@ -1,6 +1,7 @@
 import RockPaperScissors from "./RockPaperScissor";
 import Contact from "./contact";
 import TicTacToe from "./TicTacToe";
+import Snake from "./Snake";
 import Home from "./Home";
 import Login from "./Login";
 
@@ -25,6 +26,12 @@ const pages = [
   {
     Component: TicTacToe,
     path: "/tic-tac-toe",
+    exact: true,
+    isProtected: true,
+  },
+  {
+    Component: Snake,
+    path: "/snake",
     exact: true,
     isProtected: true,
   },
