@@ -3,6 +3,7 @@ import { calculateWinner } from "../../utils/ticHelper";
 import Board from "./Board";
 import Jumbotron from "./JumboTicTac";
 import Zoom from 'react-reveal/Zoom';
+import Jello from 'react-reveal/Jello';
 
 const container = {
   justifyContent: "center",
@@ -60,16 +61,16 @@ const Game = () => {
       {showDiv ? <Jumbotron /> : null }
       <div style={GameStyle}>
         <Zoom>
-            <h3 style={styles}>
-              {winner
+        <h3 style={styles}>
+            {winner
                 ? "Winner: " + winner
                 : "Next Player: " + (xIsNext ? "❌" : "⭕")}
             </h3>
-        <div style={container}>
-          {" "}
-          <Board squares={board} onClick={handleClick} />
+            <div style={container}>
+        {" "}
+        <Board squares={board} onClick={handleClick} />
         </div >
-          <div style={styles}>
+        <div style={styles}>
             {renderMoves()}
                 </div>
         </Zoom>
