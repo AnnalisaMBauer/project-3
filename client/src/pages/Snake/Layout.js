@@ -1,5 +1,8 @@
 //layout of snake playing field
-const CANVAS_SIZE = [500, 500];
+const CANVAS_SIZE = {
+  height: 525,
+  width: 550,
+};
 //where snake starts
 const SNAKE_START = [
   [8, 7],

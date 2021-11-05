@@ -41,17 +41,26 @@ const Snake = () => {
     setGameOver(true);
   };
 
-  const moveSnake = ({ keyCode }) =>
-    keyCode >= 37 && keyCode <= 40 && setDir(DIRECTIONS[keyCode]);
+  const moveSnake = (e) => {
+    const { keyCode } = e;
+    e.preventDefault();
 
-  const createApple = () =>
-    apple.map((_, i) => Math.floor(Math.random() * (CANVAS_SIZE[i] / SCALE)));
+    keyCode >= 37 && keyCode <= 40 && setDir(DIRECTIONS[keyCode]);
+  };
+
+  const createApple = () => {
+    const dimensions = [CANVAS_SIZE.width, CANVAS_SIZE.height];
+
+    return apple.map((_, i) =>
+      Math.floor(Math.random() * (dimensions[i] / SCALE))
+    );
+  };
 
   const checkCollision = (piece, snk = snake) => {
     if (
-      piece[0] * SCALE >= CANVAS_SIZE[0] ||
+      piece[0] * SCALE >= CANVAS_SIZE.width ||
       piece[0] < 0 ||
-      piece[1] * SCALE >= CANVAS_SIZE[1] ||
+      piece[1] * SCALE >= CANVAS_SIZE.height ||
       piece[1] < 0
     )
       return true;
@@ -88,7 +97,7 @@ const Snake = () => {
     //canvas
     const context = canvasRef.current.getContext("2d");
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
-    context.clearRect(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
+    context.clearRect(0, 0, CANVAS_SIZE.width, CANVAS_SIZE.height);
     //snake
     context.fillStyle = "lime";
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
@@ -101,7 +110,7 @@ const Snake = () => {
   const ContStyle = {
     display: "grid",
     gridTemplateRows: "1fr 1fr",
-    height: '100%',
+    height: "100%",
   };
 
   const GameStyle = {
@@ -115,38 +124,43 @@ const Snake = () => {
       {showDiv ? <Jumbotron /> : null}
       <Zoom>
         <div style={GameStyle}>
-    <div className="bg-dark p-3"
-      style={{
-        display: "flex",
-        margin: "1em 0",
-        alignItems: "center",
-        flexDirection: "column",
-        fontFamily: 'Orbitron',
-        color: 'white',
-        borderRadius: '30px',
-      }}
-      role="button"
-      tabIndex="0"
-      onKeyDown={(e) => moveSnake(e)}
-    >
-      {" "}
-      <h1 className="display-5 pt-0">Score: {score.apples}</h1>
-      <canvas
-        style={{
-          border: "4px solid black",
-          backgroundColor: "rgba(250, 250, 250, 0.6)",
-        }}
-        ref={canvasRef}
-        width={`${CANVAS_SIZE[0]}px`}
-        height={`${CANVAS_SIZE[1]}px`}
-      />
-      {gameOver && (
-        <div style={{ fontSize: "2.5em", fontWeight: "600" }}>GAME OVER</div>
-      )}
-      <button className="mt-3" onClick={startGame}>Start Game</button>
-    </div>
-    </div>
-    </Zoom>
+          <div
+            className="bg-dark p-3"
+            style={{
+              display: "flex",
+              margin: "1em 0",
+              alignItems: "center",
+              flexDirection: "column",
+              fontFamily: "Orbitron",
+              color: "white",
+              borderRadius: "30px",
+            }}
+            role="button"
+            tabIndex="0"
+            onKeyDown={(e) => moveSnake(e)}
+          >
+            {" "}
+            <h1 className="display-5 pt-0">Score: {score.apples}</h1>
+            <canvas
+              style={{
+                border: "4px solid black",
+                backgroundColor: "rgba(250, 250, 250, 0.6)",
+              }}
+              ref={canvasRef}
+              width={`${CANVAS_SIZE.width}px`}
+              height={`${CANVAS_SIZE.height}px`}
+            />
+            {gameOver && (
+              <div style={{ fontSize: "2.5em", fontWeight: "600" }}>
+                GAME OVER
+              </div>
+            )}
+            <button className="mt-3" onClick={startGame}>
+              Start Game
+            </button>
+          </div>
+        </div>
+      </Zoom>
     </div>
   );
 };
