@@ -24,9 +24,9 @@
 
 ## Description
 
-GG (GeekGames) is an application that has a collection of games that are available for play online and offline.
+Geek Games "GG" is an application that has a collection of games that are available for play online and offline.
 
-Sign-up and login to keep track of you r scores. 
+Sign-up and login to keep track of your scores. 
 Play against a friend or try you hand(fingers) against the our 'Ai': Quixote.<br>
 
 Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) and makes a great opponent.
