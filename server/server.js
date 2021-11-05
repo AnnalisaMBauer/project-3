@@ -1,5 +1,4 @@
 const express = require("express");
-const logger = require("morgan");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
 const { typeDefs, resolvers } = require("./schemas");
@@ -18,8 +17,6 @@ server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-app.use(logger("dev"));
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === "production") {
