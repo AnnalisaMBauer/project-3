@@ -1,0 +1,32 @@
+.Board {
+  position: relative;
+  margin: 0 auto;
+  background-color: rgb(153, 197, 197);
+  background-image:    linear-gradient(#333 1px, transparent 1px),    linear-gradient(90deg, #333 1px, transparent 1px);
+  
+}
+
+.contBox {
+    width: 700px;
+    border-radius: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    
+}
+
+.Cell {
+    background: rgb(37, 124, 206);
+    position: absolute;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.button {
+    margin-left: 12px;
+    cursor: pointer;
+    
+}
