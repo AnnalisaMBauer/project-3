@@ -57,7 +57,7 @@ Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) an
 - MongoDB
 
 ## Installation
-In order to run this application you will to install `npm install` in the command-line terminal to install dependencies. The application itself can be executed with command `npm run develop` in the command-line terminal.
+In order to run this application you will to install `npm install` in the command-line terminal to install dependencies. The application itself can be executed with command `npm run build` in the command-line terminal.
 
 ## Future Scope
 We'll keep adding new games of course...
@@ -83,4 +83,4 @@ To contribute to the project please fork this repo and clone this project to you
 
 
 ## Contact
-Please contact us at haight.haight@gmail.com, brevinyoung@gmail.com, and annalisa.bauer1@gmail.com with any questions or concerns. A copy of the deployed application can be seen at the following https://geek-games.herokuapp.com/.
+Please contact us at haight.haight@gmail.com, brevinyoung@gmail.com, and annalisa.bauer1@gmail.com with any questions or concerns. A copy of the deployed application can be seen at the following https://geek-games.herokuapp.com/login.
