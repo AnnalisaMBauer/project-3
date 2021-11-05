@@ -1,7 +1,5 @@
 
 
-
-
 ```
       ___          ___     
      /\__\        /\  \    
@@ -25,22 +23,35 @@
 ```
 
 ## Description
+
 GG (GeekGames) is an application that has a collection of games that are available for play online and offline.
 
 Sign-up and login to keep track of you r scores. 
 Play against a friend or try you hand(fingers) against the our 'Ai': Quixote.<br>
-
 
 Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) and makes a great opponent.
 <br></br>
 ![quixoteMD](https://user-images.githubusercontent.com/69359454/140375048-d999205f-9c55-411c-97d2-558c10ef9478.png)
 #### Quixote © 2021 Geek Games
 
-## About this project
-Developed 
 
-## Technologies
-React.js, GraphQl, MongoDB
+
+## Table of Contents
+
+* [Technology](#technology)
+* [Future Scope](#future scope)
+* [License](#license)
+* [Contributing](#contributing)
+* [Images](#images)
+* [Contact](#contact)
+
+
+## Technology
+- React.js
+- HTML
+- Javascript
+- GraphQL
+- Apollo Server
 
 ## Future Scope
 We'll keep adding new games of course...
@@ -52,80 +63,18 @@ We'll keep adding new games of course...
 * More React functionality (intelligent type prediction).
 * Styling the site more to that of gamers.
 
-## Contributions
-Special thanks to @tuckerbeauchamp
 
 ## License
-MIT
+![CC0](https://img.shields.io/badge/badge-CC0-blue)
+    This project is under the CC0 license
+    
+## Contributing
+To contribute to the project please fork this repo and clone this project to your own machine. Commit any relevant changes to your own branch and push your work back up to your fork. Submit a pull request so that we can review your changes to be committed to the main branch. Special thanks to @tuckerbeauchamp.
 
-# This project was created using React.js
-## Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Images
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Please contact us at haight.haight@gmail.com, brevinyoung@gmail.com, and annalisa.bauer1@gmail.com with any questions or concerns. A copy of the deployed application can be seen at the following https://geek-games.herokuapp.com/.
