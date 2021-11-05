@@ -48,11 +48,13 @@ Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) an
 
 
 ## Technology
-- React.js
 - HTML
+- CSS
 - Javascript
+- React.js
 - GraphQL
 - Apollo Server
+- MongoDB
 
 ## Installation
 In order to run this application you will to install `npm install` in the command-line terminal to install dependencies. The application itself can be executed with command `npm run develop` in the command-line terminal.
