@@ -18,15 +18,15 @@ const logo = {
   color: "white",
   fontSize: "3em",
   paddingLeft: ".5em",
-  fontWeight: "500",
   
 };
 const nav = {
-  paddingRight: "4em",
+  paddingRight: "1em",
   display: "flex",
   listStyle: "none",
   margin: "0",
   alignItems: "center",
+  fontSize: "1.7em",
 };
 const Quixote = {
   width: '10%',
@@ -48,7 +48,7 @@ function NavBar({ currentPage, handlePageChange }) {
         <nav>
           <ul style={nav}>
             <li className={currentPage === "Contact" ? "active" : ""}>
-              <Link to="/contact" className="m-5 text-white ">
+              <Link to="/contact" className="m-5 text-white">
                 Contact
               </Link>
             </li>

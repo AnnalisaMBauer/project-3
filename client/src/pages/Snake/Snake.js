@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useInterval } from "./Hook";
+import Jumbotron from "./JumboSnake";
+import Zoom from "react-reveal/Zoom";
+
 import {
   CANVAS_SIZE,
   SNAKE_START,
@@ -16,6 +19,8 @@ const Snake = () => {
   const [dir, setDir] = useState([0, -1]);
   const [speed, setSpeed] = useState(null);
   const [gameOver, setGameOver] = useState(false);
+  const [showDiv, setShowDiv] = useState(true);
+  const clickDiv = () => setShowDiv(false);
   const [score, setScore] = useState({
     apples: 0,
   });
@@ -85,23 +90,40 @@ const Snake = () => {
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
     context.clearRect(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
     //snake
-    context.fillStyle = "pink";
+    context.fillStyle = "lime";
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
     //apple
-    context.fillStyle = "blue";
+    context.fillStyle = "red";
     context.fillRect(apple[0], apple[1], 1, 1);
   }, [snake, apple, gameOver]);
 
   useInterval(() => gameLoop(), speed);
+  const ContStyle = {
+    display: "grid",
+    gridTemplateRows: "1fr 1fr",
+    height: '100%',
+  };
 
+  const GameStyle = {
+    gridArea: "1 / 1",
+    zIndex: "1",
+    marginLeft: "auto",
+    marginRight: "auto",
+  };
   return (
-    <div
+    <div onClick={clickDiv} class="container mb-5 p-1" style={ContStyle}>
+      {showDiv ? <Jumbotron /> : null}
+      <Zoom>
+        <div style={GameStyle}>
+    <div className="bg-dark p-3"
       style={{
         display: "flex",
-        margin: "4em 0",
+        margin: "1em 0",
         alignItems: "center",
         flexDirection: "column",
         fontFamily: 'Orbitron',
+        color: 'white',
+        borderRadius: '30px',
       }}
       role="button"
       tabIndex="0"
@@ -121,7 +143,10 @@ const Snake = () => {
       {gameOver && (
         <div style={{ fontSize: "2.5em", fontWeight: "600" }}>GAME OVER</div>
       )}
-      <button onClick={startGame}>Start Game</button>
+      <button className="mt-3" onClick={startGame}>Start Game</button>
+    </div>
+    </div>
+    </Zoom>
     </div>
   );
 };

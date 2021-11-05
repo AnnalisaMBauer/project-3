@@ -80,7 +80,7 @@ function Body({ currentPage, handlePageChange }) {
             <div style={ImgStyle}>
             <Link to="/rock-paper-scissors" className="p-2 text-white">
               <img
-                src="./img/rps1.png"
+                src="./img/RPScaro.png"
                 class="d-block w-100 rounded"
                 alt="..."
                 />
@@ -97,7 +97,7 @@ function Body({ currentPage, handlePageChange }) {
           <div style={ImgStyle}>
             <Link to="/tic-tac-toe" className="p-2 text-white">
               <img
-                src="./img/tictac.png"
+                src="./img/TTTcaro.png"
                 className="d-block w-100"
                 alt="..."
                 />
@@ -114,7 +114,7 @@ function Body({ currentPage, handlePageChange }) {
           <div style={ImgStyle}>
             <Link to="/snake" className="p-2 text-white">
               <img
-                src="./img/tictac.png"
+                src="./img/SNKcaro.png"
                 className="d-block w-100"
                 alt="..."
                 />
@@ -129,7 +129,7 @@ function Body({ currentPage, handlePageChange }) {
           </div>
         </div>
         <button
-          className="carousel-control-prev"
+          className="carousel-control-prev bg-dark"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
@@ -142,7 +142,7 @@ function Body({ currentPage, handlePageChange }) {
           <span className="visually-hidden"></span>
         </button>
         <button
-          className="carousel-control-next"
+          className="carousel-control-next bg-dark"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
