@@ -39,6 +39,7 @@ Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) an
 ## Table of Contents
 
 * [Technology](#technology)
+* [Installation](#installation)
 * [Future Scope](#future_scope)
 * [License](#license)
 * [Contributing](#contributing)
@@ -52,6 +53,9 @@ Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) an
 - Javascript
 - GraphQL
 - Apollo Server
+
+## Installation
+In order to run this application you will to install `npm install` in the command-line terminal to install dependencies. The application itself can be executed with command `npm run develop` in the command-line terminal.
 
 ## Future Scope
 We'll keep adding new games of course...
