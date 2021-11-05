@@ -90,17 +90,18 @@ const Snake = () => {
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
     context.clearRect(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
     //snake
-    context.fillStyle = "pink";
+    context.fillStyle = "lime";
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
     //apple
-    context.fillStyle = "blue";
+    context.fillStyle = "red";
     context.fillRect(apple[0], apple[1], 1, 1);
   }, [snake, apple, gameOver]);
 
   useInterval(() => gameLoop(), speed);
   const ContStyle = {
     display: "grid",
-    gridTemplateRows: "1fr 1fr", 
+    gridTemplateRows: "1fr 1fr",
+    height: '100%',
   };
 
   const GameStyle = {
@@ -110,17 +111,19 @@ const Snake = () => {
     marginRight: "auto",
   };
   return (
-    <div onClick={clickDiv} class="container mb-5" style={ContStyle}>
+    <div onClick={clickDiv} class="container mb-5 p-1" style={ContStyle}>
       {showDiv ? <Jumbotron /> : null}
       <Zoom>
         <div style={GameStyle}>
-    <div
+    <div className="bg-dark p-3"
       style={{
         display: "flex",
-        margin: "4em 0",
+        margin: "1em 0",
         alignItems: "center",
         flexDirection: "column",
         fontFamily: 'Orbitron',
+        color: 'white',
+        borderRadius: '30px',
       }}
       role="button"
       tabIndex="0"
@@ -140,7 +143,7 @@ const Snake = () => {
       {gameOver && (
         <div style={{ fontSize: "2.5em", fontWeight: "600" }}>GAME OVER</div>
       )}
-      <button onClick={startGame}>Start Game</button>
+      <button className="mt-3" onClick={startGame}>Start Game</button>
     </div>
     </div>
     </Zoom>
