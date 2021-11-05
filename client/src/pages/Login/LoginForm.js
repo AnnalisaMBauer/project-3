@@ -52,7 +52,7 @@ const Style ={
   fontFamily: 'Orbitron',
 }
   return (
-    <div className="p-5" style={Style}>
+    <div className="p-2 ml-4" style={Style}>
     <div >
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>

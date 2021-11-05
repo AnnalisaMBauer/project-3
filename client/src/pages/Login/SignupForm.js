@@ -61,7 +61,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="p-5">
+    <div className="p-2 ml-4">
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
@@ -118,7 +118,7 @@ const SignupForm = () => {
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
-        <div className="mt-3">
+        <div className="mt-1">
         <Button
           disabled={
             !(
