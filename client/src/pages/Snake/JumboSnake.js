@@ -26,15 +26,14 @@ const Jumbotron = () => {
         style={Style}
       >
         <h1 class="display-4">
-          <em>Tic Tac Toe</em>
+          <em>Snake Game</em>
         </h1>
         <p class="lead">
-          This is a simultaneous, zero-sum game, and it has only two possible
-          outcomes:<br></br>a draw, or a win for one player and a loss for the
-          other.<br></br>
-          "rock crushes scissors" | "paper covers rock" | "scissors cuts paper".
+          Move through the environment and collect the dot and get a point.<br></br> Touch the wall and it's over!
           <br></br>
-          If the game is a draw, it is repeated until a winner is declared.
+          The snake get's longer with each point scored.
+          <br></br>
+          How long can you stay alive??
         </p>
         <p>
           <em>Click to begin!</em>
