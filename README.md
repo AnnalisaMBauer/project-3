@@ -39,7 +39,7 @@ Quixote is our sophisticated F.Ai.C (Fake Artifical-Intelligence Computation) an
 ## Table of Contents
 
 * [Technology](#technology)
-* [Future Scope](#future scope)
+* [Future Scope](#future_scope)
 * [License](#license)
 * [Contributing](#contributing)
 * [Images](#images)
