@@ -129,7 +129,7 @@ function Body({ currentPage, handlePageChange }) {
           </div>
         </div>
         <button
-          className="carousel-control-prev"
+          className="carousel-control-prev bg-dark"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
@@ -142,7 +142,7 @@ function Body({ currentPage, handlePageChange }) {
           <span className="visually-hidden"></span>
         </button>
         <button
-          className="carousel-control-next"
+          className="carousel-control-next bg-dark"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"

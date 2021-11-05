@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useInterval } from "./Hook";
+import Jumbotron from "./JumboSnake";
+import Zoom from "react-reveal/Zoom";
+
 import {
   CANVAS_SIZE,
   SNAKE_START,
@@ -16,6 +19,8 @@ const Snake = () => {
   const [dir, setDir] = useState([0, -1]);
   const [speed, setSpeed] = useState(null);
   const [gameOver, setGameOver] = useState(false);
+  const [showDiv, setShowDiv] = useState(true);
+  const clickDiv = () => setShowDiv(false);
   const [score, setScore] = useState({
     apples: 0,
   });
@@ -93,8 +98,22 @@ const Snake = () => {
   }, [snake, apple, gameOver]);
 
   useInterval(() => gameLoop(), speed);
+  const ContStyle = {
+    display: "grid",
+    gridTemplateRows: "1fr 1fr", 
+  };
 
+  const GameStyle = {
+    gridArea: "1 / 1",
+    zIndex: "1",
+    marginLeft: "auto",
+    marginRight: "auto",
+  };
   return (
+    <div onClick={clickDiv} class="container mb-5" style={ContStyle}>
+      {showDiv ? <Jumbotron /> : null}
+      <Zoom>
+        <div style={GameStyle}>
     <div
       style={{
         display: "flex",
@@ -122,6 +141,9 @@ const Snake = () => {
         <div style={{ fontSize: "2.5em", fontWeight: "600" }}>GAME OVER</div>
       )}
       <button onClick={startGame}>Start Game</button>
+    </div>
+    </div>
+    </Zoom>
     </div>
   );
 };
