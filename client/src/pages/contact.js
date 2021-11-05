@@ -4,13 +4,9 @@ import Zoom from "react-reveal/Zoom";
 
 function Contact() {
   const Style = {
-    boxShadow: "4px 4px 10px 1px black",
-    borderRadius: "1rem",
-    background:
-      "linear-gradient(180deg, rgba(83,175,200,1) 10%, rgba(255,255,255,0.4983734227129337) 100%)",
-    color: "white",
     padding: "1rem",
     width: "800px",
+    fontFamily: 'Orbitron',
   };
   const form = useRef();
   const sendEmail = (e) => {
@@ -37,10 +33,10 @@ function Contact() {
     <div className="d-flex justify-content-center">
       <Zoom>
         <div>
-          <div id="bg-image-contact" className="mb-5" style={Style}>
-            <div className="col-md-6 px-0">
+          <div id="bg-image-contact" className="mt-1" style={Style}>
+            <div className="col px-1">
               <h1 className="display-4 fst-italic">Contact us!</h1>
-              <p className="lead my-3 m-1">
+              <p className="lead m-1">
                 If:<br></br>
                 You're interested in joining our team of developers...<br></br>
                 You're stuck on one of the levels...<br></br>

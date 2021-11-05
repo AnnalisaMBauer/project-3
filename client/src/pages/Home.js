@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 function Body({ currentPage, handlePageChange }) {
   const Style = {
     marginTop: "10px",
     height: "40px",
+    fontFamily: 'Orbitron',
   };
   const ImgStyle = {
     marginLeft: 'auto',
@@ -12,6 +14,7 @@ function Body({ currentPage, handlePageChange }) {
     height: "550px",
     width: "700px",
     borderRadius: '30px',
+    fontFamily: 'Orbitron',
   };
 
   const BntStyle = {
@@ -22,20 +25,31 @@ function Body({ currentPage, handlePageChange }) {
     marginLeft: '10%',
     marginRight: '10%',
     borderRadius: '30px',
+    fontFamily: 'Orbitron',
   };
 
   const BtmBtn = {
     marginLeft: '10px',
     borderRadius: '10px',
+    fontFamily: 'Orbitron',
+  }
+
+  const HomeBox = {
+    fontFamily: 'Orbitron',
+  }
+
+  const QuixStyle = {
+    marginTop: '500px',
   }
 
   return (
     <div>
+    <div className="homeBox" style={HomeBox}>
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
         data-bs-ride="carousel"
-      >
+        >
         <div className="carousel-indicators" style={Style}>
           <button
             type="button"
@@ -45,21 +59,21 @@ function Body({ currentPage, handlePageChange }) {
             aria-current="true"
             aria-label="Slide 1"
             style={BtmBtn}
-          >RPS</button>
+            >RPS</button>
           <button
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="1"
             aria-label="Slide 2"
             style={BtmBtn}
-          >TTT</button>
+            >TTT</button>
           <button
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="2"
             aria-label="Slide 3"
             style={BtmBtn}
-          >SNK</button>
+            >SNK</button>
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -69,7 +83,7 @@ function Body({ currentPage, handlePageChange }) {
                 src="./img/rps1.png"
                 class="d-block w-100 rounded"
                 alt="..."
-              />
+                />
             </Link>
             </div>
             <div className="carousel-caption d-none d-md-block">
@@ -86,7 +100,7 @@ function Body({ currentPage, handlePageChange }) {
                 src="./img/tictac.png"
                 className="d-block w-100"
                 alt="..."
-              />
+                />
             </Link>
             </div>
             <div className="carousel-caption d-none d-md-block">
@@ -103,7 +117,7 @@ function Body({ currentPage, handlePageChange }) {
                 src="./img/tictac.png"
                 className="d-block w-100"
                 alt="..."
-              />
+                />
             </Link>
             </div>
             <div className="carousel-caption d-none d-md-block">
@@ -120,11 +134,11 @@ function Body({ currentPage, handlePageChange }) {
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
           style={BntStyle}
-        >
+          >
           <span
             className="carousel-control-prev-icon"
             aria-hidden="true"
-          ></span>
+            ></span>
           <span className="visually-hidden"></span>
         </button>
         <button
@@ -133,14 +147,17 @@ function Body({ currentPage, handlePageChange }) {
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
           style={BntStyle}
-        >
+          >
           <span
             className="carousel-control-next-icon"
             aria-hidden="true"
-          ></span>
+            ></span>
           <span className="visually-hidden"></span>
         </button>
       </div>
+
+    </div>
+
     </div>
   );
 }

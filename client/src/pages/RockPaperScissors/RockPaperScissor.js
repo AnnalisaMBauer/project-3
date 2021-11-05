@@ -57,25 +57,31 @@ const RockPaperScissors = () => {
     width: "150px",
     height: "150px",
     boxShadow: "4px 4px 10px 1px black",
+    fontFamily: 'Orbitron',
   };
 
   const ContStyle = {
     display: "grid",
     gridTemplateRows: "1fr 1fr",
-    marginTop: "20vh",
+    marginTop: "5vh",
+    fontFamily: 'Orbitron',
   };
 
   const GameStyle = {
     gridArea: "1 / 1",
+    fontFamily: 'Orbitron',
   };
 
   // TODO add username of logged in user to h1 'User choice' element
   return (
-    <div onClick={clickDiv} class="container mb-5" style={ContStyle}>
+    <div onClick={clickDiv} class="container" style={ContStyle}>
       {showDiv ? <Jumbotron /> : null}
 
       <div className="d-flex justify-content-center" style={GameStyle}>
         <div className="p-1">
+        <Flash spy={result}>
+            <h1 className="display-1 text-center">{result}</h1>
+          </Flash>
           <Zoom>
             <div className="row p-1 justify-content-center">
               <h1 className="display-5 pt-0">Wins: {scores.wins}</h1>
@@ -90,7 +96,7 @@ const RockPaperScissors = () => {
                 Computer's choice is: <Swing>{computerChoice}</Swing>
               </h1>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
               {choices.map((choice, index) => (
                 <button
                   style={Style}
@@ -105,9 +111,7 @@ const RockPaperScissors = () => {
               ))}
             </div>
           </Zoom>
-          <Flash spy={result}>
-            <h1 className="display-1 text-center mb-5">{result}</h1>
-          </Flash>
+        
         </div>
       </div>
     </div>

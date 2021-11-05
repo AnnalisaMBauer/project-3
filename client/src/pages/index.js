@@ -1,4 +1,4 @@
-import RockPaperScissors from "./RockPaperScissor";
+import RockPaperScissors from "./RockPaperScissors/RockPaperScissor";
 import Contact from "./contact";
 import TicTacToe from "./TicTacToe";
 import Snake from "./Snake";

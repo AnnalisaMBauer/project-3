@@ -16,6 +16,7 @@ const Jumbotron = () => {
     color: "white",
     height: "400px",
     margin: "auto",
+    fontFamily: 'Orbitron',
   };
 
   return (

@@ -12,6 +12,7 @@ const style1 = {
   backgroundColor: "rgb(206 216 223 / 50%)",
   alignItems: "center",
   justifyContent: "space-between",
+  fontFamily: 'Orbitron',
 };
 const logo = {
   color: "white",

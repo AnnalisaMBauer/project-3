@@ -3,13 +3,13 @@ import { calculateWinner } from "../../utils/ticHelper";
 import Board from "./Board";
 import Jumbotron from "./JumboTicTac";
 import Zoom from "react-reveal/Zoom";
-import Jello from "react-reveal/Jello";
 
 const container = {
   justifyContent: "center",
   alignItems: "center",
   display: "flex",
   margin: "3em 0 1em 0",
+  fontFamily: 'Orbitron',
 };
 
 const styles = {
@@ -20,6 +20,7 @@ const styles = {
   marginRight: "auto",
   width: "200px",
   textAlign: "center",
+  fontFamily: 'Orbitron',
 };
 
 const Game = () => {
@@ -46,7 +47,7 @@ const Game = () => {
   const ContStyle = {
     display: "grid",
     gridTemplateRows: "1fr 1fr",
-    marginTop: "20vh",
+    marginTop: "10vh",
   };
 
   const GameStyle = {
@@ -63,7 +64,7 @@ const Game = () => {
         <Zoom>
           <h3 style={styles}>
             {winner
-              ? "Winner: " + winner
+              ? "Winner: " + (winner + '!')
               : "Next Player: " + (xIsNext ? "❌" : "⭕")}
           </h3>
           <div style={container}>

@@ -48,9 +48,11 @@ const LoginForm = () => {
       password: '',
     });
   };
-
+const Style ={
+  fontFamily: 'Orbitron',
+}
   return (
-    <div className="p-5">
+    <div className="p-5" style={Style}>
     <div >
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
