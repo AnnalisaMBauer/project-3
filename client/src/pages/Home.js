@@ -74,6 +74,13 @@ function Body({ currentPage, handlePageChange }) {
             aria-label="Slide 3"
             style={BtmBtn}
             >SNK</button>
+              <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+            style={BtmBtn}
+            >GOL</button>
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -124,6 +131,23 @@ function Body({ currentPage, handlePageChange }) {
               <h5>Snake Game</h5>
               <p>
                 Eat the apples, don't touch the walls... Stay alive.
+              </p>
+            </div>
+          </div>
+          <div className="carousel-item">
+          <div style={ImgStyle}>
+            <Link to="/game-of-life" className="p-2 text-white">
+              <img
+                src="./img/SNKcaro.png"
+                className="d-block w-100"
+                alt="..."
+                />
+            </Link>
+            </div>
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Game Of Life</h5>
+              <p>
+                Game of life.
               </p>
             </div>
           </div>

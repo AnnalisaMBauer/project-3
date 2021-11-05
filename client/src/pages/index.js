@@ -2,6 +2,7 @@ import RockPaperScissors from "./RockPaperScissors/RockPaperScissor";
 import Contact from "./contact";
 import TicTacToe from "./TicTacToe";
 import Snake from "./Snake";
+import GameOfLife from "./GameOfLife";
 import Home from "./Home";
 import Login from "./Login";
 
@@ -32,6 +33,12 @@ const pages = [
   {
     Component: Snake,
     path: "/snake",
+    exact: true,
+    isProtected: true,
+  },
+  {
+    Component: GameOfLife,
+    path: "/game-of-life",
     exact: true,
     isProtected: true,
   },
