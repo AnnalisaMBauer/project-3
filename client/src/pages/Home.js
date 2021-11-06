@@ -87,16 +87,15 @@ function Body({ currentPage, handlePageChange }) {
             <div style={ImgStyle}>
             <Link to="/rock-paper-scissors" className="p-2 text-white">
               <img
-                src="./img/RPScaro.png"
+                src="./img/RPScaroIMG.png"
                 class="d-block w-100 rounded"
                 alt="..."
                 />
             </Link>
             </div>
             <div className="carousel-caption d-none d-md-block">
-              <h5>Rock | Paper | Scissors </h5>
+              <h5> </h5>
               <p>
-                How many times can you beat Quixote?
               </p>
             </div>
           </div>
@@ -121,16 +120,15 @@ function Body({ currentPage, handlePageChange }) {
           <div style={ImgStyle}>
             <Link to="/snake" className="p-2 text-white">
               <img
-                src="./img/SNKcaro.png"
+                src="./img/SNKcaroIMG.png"
                 className="d-block w-100"
                 alt="..."
                 />
             </Link>
             </div>
             <div className="carousel-caption d-none d-md-block">
-              <h5>Snake Game</h5>
+              <h5></h5>
               <p>
-                Eat the apples, don't touch the walls... Stay alive.
               </p>
             </div>
           </div>
@@ -138,16 +136,15 @@ function Body({ currentPage, handlePageChange }) {
           <div style={ImgStyle}>
             <Link to="/game-of-life" className="p-2 text-white">
               <img
-                src="./img/SNKcaro.png"
+                src="./img/GOLcaroIMG.png"
                 className="d-block w-100"
                 alt="..."
                 />
             </Link>
             </div>
             <div className="carousel-caption d-none d-md-block">
-              <h5>Game Of Life</h5>
+              <h5></h5>
               <p>
-                Game of life.
               </p>
             </div>
           </div>

@@ -27,7 +27,6 @@ class Game extends React.Component {
     super();
     this.rows = HEIGHT / CELL_SIZE;
     this.cols = WIDTH / CELL_SIZE;
-
     this.board = this.makeEmptyBoard();
   }
 
@@ -128,12 +127,6 @@ class Game extends React.Component {
     }, this.state.interval);
   }
 
-  /**
-   * Calculate the number of neighbors at point (x, y)
-   * @param {Array} board
-   * @param {int} x
-   * @param {int} y
-   */
   calculateNeighbors(board, x, y) {
     let neighbors = 0;
     const dirs = [
@@ -185,8 +178,8 @@ class Game extends React.Component {
   };
   render() {
     const Style = {
-        fontFamily: 'Orbitron',
-        borderRadius: '10px',
+      fontFamily: "Orbitron",
+      borderRadius: "10px",
     };
     const { cells, interval, isRunning } = this.state;
     return (
@@ -207,32 +200,30 @@ class Game extends React.Component {
             <Cell x={cell.x} y={cell.y} key={`${cell.x},${cell.y}`} />
           ))}
         </div>
-            
+
         <div style={Style} className="controls">
-          Update every{" "}
+          Speed{" "}
           <input
             value={this.state.interval}
             onChange={this.handleIntervalChange}
           />{" "}
-          msec
           {isRunning ? (
             <button className="button" style={Style} onClick={this.stopGame}>
-              Stop
+              Death
             </button>
           ) : (
             <button className="button" style={Style} onClick={this.runGame}>
-              Run
+              Life
             </button>
           )}
           <button className="button" style={Style} onClick={this.handleRandom}>
-            Random
+            Chaos
           </button>
           <button className="button" style={Style} onClick={this.handleClear}>
             Clear
           </button>
         </div>
-        </div>
-
+      </div>
     );
   }
 }
