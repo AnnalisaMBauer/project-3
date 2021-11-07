@@ -35,9 +35,9 @@ function AboutUs() {
                 This was initially our final project for the course, however, we plan to continue development and addition of games.<br></br>
                 You can find our individual GitHub Repos by following the links below:<br></br>
                 <div className="d-flex column justify-content-center align-content-center m-5" style={Team} >
-                <Link to="https://github.com/athaight" ><img src="./img/Andy.png"/><h4>Andy</h4></Link>
-                <Link to="https://github.com/byoung01" ><img src="./img/Brevin.png"/><h3>Brevin</h3></Link>
-                <Link to="https://github.com/AnnalisaMBauer" ><img src="./img/Anna.png"/><h3>Anna</h3></Link>
+                <a href="https://github.com/athaight" target="_blank"><img src="./img/Andy.png"/><h4>Andy</h4></a>
+                <a href="https://github.com/byoung01" target="_blank"><img src="./img/Brevin.png"/><h3>Brevin</h3></a>
+                <a href="https://github.com/AnnalisaMBauer" target="_blank" ><img src="./img/Anna.png"/><h3>Anna</h3></a>
                 </div>
               </p>
             </div>
