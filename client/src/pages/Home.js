@@ -38,10 +38,6 @@ function Body({ currentPage, handlePageChange }) {
     fontFamily: 'Orbitron',
   }
 
-  const QuixStyle = {
-    marginTop: '500px',
-  }
-
   return (
     <div>
     <div className="homeBox" style={HomeBox}>
