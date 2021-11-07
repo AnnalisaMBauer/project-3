@@ -18,6 +18,17 @@ function AboutUs() {
     
   }
 
+  const GitRepoLink = {
+    height: '10%',
+  }
+
+  const GitRepoBox = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    padding: '20px',
+  }
+
   return (
     <div className="d-flex justify-content-center">
       <Zoom>
@@ -38,6 +49,9 @@ function AboutUs() {
                 <a href="https://github.com/athaight" target="_blank"><img src="./img/Andy.png"/><h4>Andy</h4></a>
                 <a href="https://github.com/byoung01" target="_blank"><img src="./img/Brevin.png"/><h3>Brevin</h3></a>
                 <a href="https://github.com/AnnalisaMBauer" target="_blank" ><img src="./img/Anna.png"/><h3>Anna</h3></a>
+                </div>
+                <div className="d-flex" style={GitRepoBox}>
+                <a href="https://github.com/AnnalisaMBauer" target="_blank" ><img style={GitRepoLink} src="./img/QuixoteSmall.png"/><h3>Click here for the GeekGames GitHub repo!</h3></a>
                 </div>
               </p>
             </div>
