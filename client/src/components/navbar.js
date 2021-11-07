@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 import Auth from "../utils/auth";
 
-// import '../App.css';
-
 const style1 = {
   borderRadius: "25px",
   margin: "1.5em 0em 1em 0em",
@@ -39,14 +37,19 @@ function NavBar({ currentPage, handlePageChange }) {
   return (
     <div style={style1}>
       <header className="blog-header ">
-        <a style={logo} href="/">
+        <Link to="/" style={logo}>
           <img src="./img/quixote.png" style={Quixote} />GG
-        </a>
+        </Link>
       </header>
         <div className="col-4 d-flex justify-content-end align-items-center">
       <div className="nav-scroller py-1 mb-2">
         <nav>
           <ul style={nav}>
+          <li className={currentPage === "AboutUs" ? "active" : ""}>
+              <Link to="/about-us" className="m-5 text-white">
+                AboutUs
+              </Link>
+            </li>
             <li className={currentPage === "Contact" ? "active" : ""}>
               <Link to="/contact" className="m-5 text-white">
                 Contact

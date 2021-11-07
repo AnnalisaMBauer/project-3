@@ -2,6 +2,18 @@
   height: auto;
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  color: aqua;
+  transform: scale(1.1);
+  transform-origin: bottom;
+  transition: .5s;
+  text-decoration: none;
+}
+
 body {
   /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3rpzVqFN2vWDUjVyCEzWvs4YoAyorSQrLPzH737F0uub54u6HeesAkFEfvoHwD4biKdQ&usqp=CAU);
   background-repeat: no-repeat;
