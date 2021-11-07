@@ -3,6 +3,7 @@ import Contact from "./contact";
 import TicTacToe from "./TicTacToe";
 import Snake from "./Snake";
 import GameOfLife from "./GameOfLife";
+import AboutUs from "./AboutUs";
 import Home from "./Home";
 import Login from "./Login";
 
@@ -39,6 +40,12 @@ const pages = [
   {
     Component: GameOfLife,
     path: "/game-of-life",
+    exact: true,
+    isProtected: true,
+  },
+  {
+    Component: AboutUs,
+    path: "/about-us",
     exact: true,
     isProtected: true,
   },

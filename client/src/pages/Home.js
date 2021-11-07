@@ -87,7 +87,7 @@ function Body({ currentPage, handlePageChange }) {
             <div style={ImgStyle}>
             <Link to="/rock-paper-scissors" className="p-2 text-white">
               <img
-                src="./img/RPScaroIMG.png"
+                src="./img/RPScaro.png"
                 class="d-block w-100 rounded"
                 alt="..."
                 />
@@ -110,17 +110,14 @@ function Body({ currentPage, handlePageChange }) {
             </Link>
             </div>
             <div className="carousel-caption d-none d-md-block">
-              <h5>Tic-Tac-Toe</h5>
-              <p>
-                Good ol Xs and Os. PvP.
-              </p>
+              
             </div>
           </div>
           <div className="carousel-item">
           <div style={ImgStyle}>
             <Link to="/snake" className="p-2 text-white">
               <img
-                src="./img/SNKcaroIMG.png"
+                src="./img/SNKcaro.png"
                 className="d-block w-100"
                 alt="..."
                 />
@@ -136,7 +133,7 @@ function Body({ currentPage, handlePageChange }) {
           <div style={ImgStyle}>
             <Link to="/game-of-life" className="p-2 text-white">
               <img
-                src="./img/GOLcaroIMG.png"
+                src="./img/GOLcaro.png"
                 className="d-block w-100"
                 alt="..."
                 />

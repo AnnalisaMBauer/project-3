@@ -45,6 +45,11 @@ function NavBar({ currentPage, handlePageChange }) {
       <div className="nav-scroller py-1 mb-2">
         <nav>
           <ul style={nav}>
+          <li className={currentPage === "AboutUs" ? "active" : ""}>
+              <Link to="/about-us" className="m-5 text-white">
+                AboutUs
+              </Link>
+            </li>
             <li className={currentPage === "Contact" ? "active" : ""}>
               <Link to="/contact" className="m-5 text-white">
                 Contact
