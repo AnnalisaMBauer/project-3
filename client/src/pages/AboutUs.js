@@ -16,31 +16,29 @@ function AboutUs() {
     textAlign: 'center',
     flexDirection: 'row',
     marginTop: '1rem',
+    
   }
 
-  const GitRepoLink = {
-    height: '10%',
-    paddingRight: '2rem',
-  }
    const GitRepoTeam = {
      height: '25%',
    }
 
-  const GitRepoBox = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
+  const Box = {
+    marginLeft: '20%',
+    marginRight: '20%',
   }
 
   return (
+    <div className="container">
     <div className="d-flex justify-content-center">
       <Zoom>
           <div id="bg-image-contact" className="mt-1" style={Style}>
-            <div className="col px-1">
+            <div className="col px-1" >
               <h1 className="display-4 fst-italic">About us!</h1>
               <div className="container d-flex justify-content-center">
               <div className="lead m-1 mt-5">
-                <h4><em>We are:</em></h4>
+                <p style={Box}>
+                <em>We are:</em>
                 <br>
                 </br>
                 Recent graduates of the U of A Full Stack Web Development Bootcamp.
@@ -48,6 +46,7 @@ function AboutUs() {
                 </br>
                 This was initially our final project for the course, however, we plan to continue development and addition of games.<br></br>
                 You can find our individual GitHub Repos by following the links below:<br></br>
+                </p>
                 <div className="d-flex justify-content-center align-content-center mt-5" style={Team} >
                 <a href="https://github.com/athaight" target="_blank"><img src="./img/Andy.png" style={GitRepoTeam}/><h4>Andy</h4></a>
                 <a href="https://github.com/byoung01" target="_blank"><img src="./img/Brevin.png" style={GitRepoTeam}/><h3>Brevin</h3></a>
@@ -59,6 +58,7 @@ function AboutUs() {
 
         </div>
       </Zoom>
+    </div>
     </div>
   );
 }

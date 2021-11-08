@@ -1,5 +1,5 @@
 const FILES_TO_CACHE = [
-    "/",
+    // "/",
     "/index.html",
     "client/src/index.js",
     "/icons/icon-192x192.png",
