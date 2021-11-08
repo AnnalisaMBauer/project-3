@@ -24,7 +24,7 @@
 
 ## Description
 
-Geek Games "GG" is an application that has a collection of games that are available for play online and offline.
+Geek Games "GG" is an application that has a collection of games that are available for play online.
 
 Sign-up and login to keep track of your scores. 
 Play against a friend or try you hand(fingers) against the our 'Ai': Quixote.<br>
@@ -79,6 +79,10 @@ To contribute to the project please fork this repo and clone this project to you
 
 
 ## Images
+
+
+
+https://user-images.githubusercontent.com/87721575/140668277-ff1ae139-3402-418f-ab9b-a80e21d69df7.mp4
 
 
 
